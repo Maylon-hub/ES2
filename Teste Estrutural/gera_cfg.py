@@ -1,6 +1,14 @@
 from pathlib import Path 
 import argparse
+import os
+import sys
+
+# Adiciona o Graphviz local ao PATH
+graphviz_bin = r"d:\GitHub\ES2\Teste Estrutural\graphviz\Graphviz-15.1.0-win64\bin"
+os.environ["PATH"] += os.pathsep + graphviz_bin
+
 from py2cfg import CFGBuilder
+
 
 parser = argparse.ArgumentParser(
    description="Gera o CFG de um programa Python"
